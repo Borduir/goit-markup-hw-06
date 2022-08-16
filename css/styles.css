@@ -181,7 +181,8 @@ header {
   font-weight: 500;
   letter-spacing: 0.02em;
   padding: 32px 0;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover,
@@ -199,7 +200,10 @@ header {
 
 /* Hero section styles */
 .hero {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
     url(../images/hero-img.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -264,9 +268,9 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-width: 528px;
-height: 581px;
-  padding: 15px; 
+  width: 528px;
+  height: 581px;
+  padding: 15px;
   background-color: var(--primary-white-color);
   border-radius: 4px;
   justify-content: center;
@@ -512,6 +516,7 @@ footer .logo-part2 {
 }
 
 address {
+  width: 230px;
   margin-top: 20px;
   font-style: normal;
   font-size: 14px;
@@ -536,7 +541,7 @@ address {
   color: var(--primary-white-color);
 }
 
-.footer-h1 {
+footer p {
   text-transform: uppercase;
   font-family: 'Roboto';
   font-weight: 700;
@@ -544,11 +549,12 @@ address {
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
   margin-bottom: 20px;
+  margin-right: auto;
 }
 
 .footer-socials {
   margin-top: 12px;
-  margin-right: auto;
+  margin-right: 93px;
   margin-left: 70px;
   margin-bottom: auto;
 }
@@ -578,6 +584,53 @@ address {
 .footer-social-link:focus {
   background-color: var(--accent-text-color);
 }
+
+.pre-subscribe-container {
+  margin-top: 12px; 
+
+}
+
+.subscribe-container {
+  display: flex;
+  padding-left: 0;
+}
+
+.submit-button {
+  background-color: var(--accent-text-color);
+  color: var(--primary-white-color);
+  left: 370px;
+  width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 188%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  padding: 10px 28px;
+}
+
+.submit-button svg {
+  margin-left: 10px;
+}
+
+.subscribe-input {
+  background: inherit;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  margin-right: 12px;
+
+  padding-left: 16px;
+  color: var(--primary-white-color)
+}
+
 
 /* portfolio styles */
 .portfolio {
@@ -628,7 +681,8 @@ address {
   padding-bottom: 6px;
   padding-left: 22px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button:hover,
@@ -703,14 +757,12 @@ address {
   z-index: 2;
 }
 
-
 .project-item:hover a,
 .project-item:focus a {
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
 
 .portfolio h2 {
   font-size: 18px;
