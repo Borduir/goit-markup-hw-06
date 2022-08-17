@@ -279,6 +279,10 @@ header {
 width: 100%;
 }
 
+.modal-label-list li {
+  margin-bottom: 10px;
+}
+
 .modal-label-list p {
   margin-bottom: 4px;
 }
@@ -294,8 +298,12 @@ margin-bottom: 12px;
 }
 
 .modal-label {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-label span {
   position: relative;
-  margin-bottom: 10px;
 }
 
 .modal-label p {
@@ -309,18 +317,21 @@ letter-spacing: 0.01em;
 border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 height: 40px;
-margin-bottom: 10px;
 padding-left: 42px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-label:hover,
-.modal-label:focus{
+.modal-label:hover {
   fill: var(--accent-text-color);
 }
 
-.modal-label:hover > .modal-input,
-.modal-label:focus > .modal-input {
+.modal-label span:hover > .modal-input{
   border-color: var(--accent-text-color);
+}
+
+.modal-input:focus-within {
+  fill: var(--accent-text-color);
 }
 
 .checkbox {
@@ -329,8 +340,8 @@ padding-left: 42px;
 
 .modal-svg {
 position: absolute;
-left: 14px;
-top: 28px;
+left: 12px;
+bottom: 0px;
 }
 
 .modal-comment {
@@ -380,7 +391,14 @@ margin-left: auto;
 
 .modal-checkbox-label a{
   text-decoration: underline;
-  color: var(--accent-text-color)
+  color: var(--accent-text-color);
+  
+}
+
+.modal-checkbox-label:hover {
+  cursor: pointer;
+  fill: var(--accent-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal .submit-button {
@@ -405,8 +423,12 @@ margin-left: auto;
   background-color: var(--primary-white-color);
 }
 
-.close-modal-svg:hover,
-.close-modal-svg:focus {
+.close-modal-svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.close-btn:hover > .close-modal-svg,
+.close-btn:focus > .close-modal-svg{
   fill: var(--accent-text-color)
 }
 
@@ -714,6 +736,14 @@ footer p {
   padding-left: 0;
 }
 
+.subscribe-container:hover > .subscribe-input {
+  border-color: var(--accent-text-color);
+}
+
+.subscribe-input:focus {
+  border-color: var(--accent-text-color);
+}
+
 .submit-button {
   background-color: var(--accent-text-color);
   color: var(--primary-white-color);
@@ -748,9 +778,9 @@ footer .submit-button {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   margin-right: 12px;
-
   padding-left: 16px;
-  color: var(--primary-white-color)
+  color: var(--primary-white-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* portfolio styles */
