@@ -297,11 +297,6 @@ color: var(--title-text-color);
 margin-bottom: 12px;
 }
 
-.modal-label {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .modal-label span {
   position: relative;
 }
@@ -318,19 +313,22 @@ border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 height: 40px;
 padding-left: 42px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .modal-label:hover {
   fill: var(--accent-text-color);
 }
 
-.modal-label span:hover > .modal-input{
+.modal-label:hover > span > .modal-input{
   border-color: var(--accent-text-color);
 }
 
-.modal-input:focus-within {
+.modal-input:focus + .modal-svg {
   fill: var(--accent-text-color);
 }
 
